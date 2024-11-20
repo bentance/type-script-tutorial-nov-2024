@@ -1,6 +1,6 @@
 .input{
     display: flex;
-    width: 90%;
+    width: 95%;
     position: relative;
     align-items: center;
 }
@@ -45,20 +45,40 @@
     box-shadow: 0 0 5px black;
 }
 
+.container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .TodoList{
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 47.5%;
+    background-color: rgb(0, 192, 206);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.TodoList__heading{
+    font-size: 30px;
+    color: white;
 }
 
 .Todo_item{
     display: flex;
-    width: 29.5%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
     background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    transition: 0.2s;
+}
+
+.Todo_item:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
 }
 
 .Todo_item__single--text{
@@ -70,11 +90,19 @@
     outline: white;
 }
 
+
 .icon{
     margin-left: 10px;
     font-size: 25px;
     cursor: pointer;
 }
+
+@media (max-width:1100px){
+    .todos{
+        width:45%
+    }
+}
+
 
 @media (max-width:700px){
     .input{
@@ -83,9 +111,30 @@
 
     .TodoList{
         width: 95%;
+        margin-bottom:10px;
     }
-    .Todo_item{
-        width: 100%;
+
+    .container{
+        width: 95%;
+        flex-direction: column;
     }
 
 }
+
+.remove{
+    background-color: rgb(238, 87, 87);
+}
+
+/* not working  */
+/* .dragactive{
+    background-color: rgb(75, 203, 212);
+} */
+
+/* .dragcomplete{
+    background-color: rgb(233, 132, 132);
+    
+} */
+
+/* .drag{
+    box-shadow: 0 0 20px black;
+} */
